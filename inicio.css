@@ -13,7 +13,6 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-image: url('img/image\ 6.png'); /* Pode usar a imagem de fundo que preferir */
     background-size: cover;
     background-position: center;
     position: relative;
@@ -21,23 +20,13 @@ body {
     background-color: #fff;
 }
 
-.inicio::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.6); /* Efeito de escurecimento no fundo */
-    z-index: -1;
-}
+
 
 .contenido-banner {
     text-align: center;
     padding: 20px;
-    background-color: #333;
+    background-color: #e4f0fa;
     border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
     width: 350px;
 }
 
@@ -306,7 +295,7 @@ main {
     text-align: center;
     font-size: 2.5rem;
     font-family: 'Arial', sans-serif;
-    color: white;
+    color: black;
     margin-bottom: 20px;
     text-transform: uppercase;
   }
@@ -315,3 +304,52 @@ main {
     margin-top: 50px;
   }
   
+  .inicio-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+  }
+  
+  .inicio-img img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 4px solid white;
+  }
+  
+  .inicio-texto {
+    color: black;
+    max-width: 500px;
+  }
+  
+  .inicio-texto h1 {
+    font-size: 36px;
+    margin: 0 0 10px;
+    color: black;
+  }
+  
+  .inicio-texto h2 {
+    font-size: 20px;
+    color: black;
+    margin: 0 0 20px;
+  }
+  
+  .inicio .redes a {
+    color: black;
+    margin-right: 15px;
+    font-size: 24px;
+    transition: color 0.3s;
+  }
+  
+  .inicio .redes a:hover {
+    color: #ccc;
+  }
+
+  .inicio::before {
+    background-color: rgba(0, 0, 0, 0.3); /* estava 0.6 */
+}

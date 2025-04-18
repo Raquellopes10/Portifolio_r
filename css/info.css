@@ -1,0 +1,291 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  body {
+    background: #d9d9d9;
+   /* display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;*/
+  }
+  
+  .container {
+    width: 900px;
+    height: 500px;
+    display: flex;
+    margin: 100px auto; /* Centraliza horizontalmente e dá espaçamento do topo */
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    background: #fff;
+  }
+  
+  .left-section {
+    width: 50%;
+    padding: 50px 40px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .left-section h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #000;
+  }
+  
+  .left-section h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: #000;
+  }
+  
+  .left-section h1 span {
+    color: black;
+    font-weight: bold;
+  }
+  
+  .left-section p {
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .left-section .description {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  
+  .left-section button {
+    width: fit-content;
+    padding: 10px 20px;
+    background-color: white;
+    border: none;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: background 0.3s;
+  }
+  
+  .left-section button:hover {
+    background-color: #ccc;
+  }
+  
+  .right-section {
+    width: 50%;
+    position: relative;
+    background: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .right-section img {
+    width: 220px;
+    border-radius: 10px;
+  }
+  
+  /*menu responsivo*/
+.header {
+    background-color: #f7f7f7;
+    box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, .1);
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      padding: 10px 0; /* Adicione um pouco de padding para melhorar a aparência */
+      
+      }
+      
+      .header ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      overflow: hidden;
+      background-color: #f7f7f7;
+    }
+      
+      .header li a {
+      display: block;
+      padding: 20px 20px;
+      border-right: 1px solid white;
+      text-decoration: none;
+      color: black;
+      font-size: 18px;
+      
+      }
+      
+      .header li a:hover,
+      .header .menu-btn:hover {
+      background-color:rgba(200, 200, 200, 0.2);
+      border-radius: 20px;
+      }
+      
+      .header .logo {
+      display: block;
+      float: left;
+      padding: 3px 20px;
+      text-decoration: none;
+      }
+      
+      /* menu */
+      
+      .header .menu {
+      clear: both;
+      max-height: 0;
+      transition: max-height .2s ease-out;
+      }
+      
+      /* menu icon */
+      
+      .header .menu-icon {
+      cursor: pointer;
+      display: inline-block;
+      float: right;
+      padding: 28px 20px;
+      position: relative;
+      user-select: none;
+      }
+      
+      .header .menu-icon .navicon {
+      background: #333;
+      display: block;
+      height: 2px;
+      position: relative;
+      transition: background .2s ease-out;
+      width: 18px;
+      }
+      
+      .header .menu-icon .navicon:before,
+      .header .menu-icon .navicon:after {
+      background: #333;
+      content: '';
+      display: block;
+      height: 100%;
+      position: absolute;
+      transition: all .2s ease-out;
+      width: 100%;
+      }
+      
+      .header .menu-icon .navicon:before {
+      top: 5px;
+      }
+      
+      .header .menu-icon .navicon:after {
+      top: -5px;
+      }
+      
+      /* menu btn */
+      
+      .header .menu-btn {
+      display: none;
+      }
+      
+      .header .menu-btn:checked ~ .menu {
+      max-height: 100%;
+      }
+      
+      .header .menu-btn:checked ~ .menu-icon .navicon {
+      background: transparent;
+      }
+      
+      .header .menu-btn:checked ~ .menu-icon .navicon:before {
+      transform: rotate(-45deg);
+      }
+      
+      .header .menu-btn:checked ~ .menu-icon .navicon:after {
+      transform: rotate(45deg);
+      }
+      
+      .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+      .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+      top: 0;
+      }
+      
+      /* 48em = 768px */
+      
+      @media (min-width: 1370px) {
+      .header li {
+        float: left;
+      }
+      .header li a {
+        padding: 20px 30px;
+      }
+      .header .menu {
+        clear: none;
+        float: right;
+        max-height: none;
+      }
+      .header .menu-icon {
+        display: none;
+      }
+      }
+
+      /*prototipos*/
+      .prototypes {
+        background-color: #f7f7f7;
+        padding: 60px 40px;
+        text-align: center;
+        margin-top: 80px;
+        display: flex;
+        flex-direction: column; /* ESSA LINHA AQUI FAZ A MÁGICA */
+
+          }
+          
+      
+      
+      .prototypes h2 {
+        font-size: 32px;
+        margin-bottom: 30px;
+        color: #000;
+      }
+      
+      .prototypes-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+      }
+      
+      .prototype-card {
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        width: 280px;
+        padding: 20px;
+        text-align: left;
+        transition: transform 0.3s ease;
+      }
+      
+      .prototype-card:hover {
+        transform: translateY(-5px);
+      }
+      
+      .prototype-card img {
+        width: 100%;
+        border-radius: 10px;
+        margin-bottom: 15px;
+      }
+      
+      .prototype-card h3 {
+        font-size: 18px;
+        margin-bottom: 10px;
+        color: #333;
+      }
+      
+      .prototype-card p {
+        font-size: 14px;
+        color: #555;
+        margin-bottom: 15px;
+      }
+      
+      .prototype-card a {
+        text-decoration: none;
+        font-weight: bold;
+        color: black;
+      }
+      
