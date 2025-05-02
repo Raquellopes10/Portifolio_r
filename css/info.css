@@ -289,3 +289,58 @@
         color: black;
       }
       
+      /*RESPONSIVIDADE*/
+      @media (max-width: 1000px) {
+        .container {
+          flex-direction: column;
+          width: 90%;
+          height: auto;
+        }
+  
+        .left-section,
+        .right-section {
+          width: 100%;
+          padding: 30px;
+          text-align: center;
+        }
+  
+        .left-section h1 {
+          font-size: 28px;
+        }
+  
+        .left-section h2 {
+          font-size: 18px;
+        }
+  
+        .left-section p {
+          font-size: 14px;
+        }
+  
+        .right-section img {
+          width: 180px;
+          margin-top: 20px;
+        }
+      }
+  
+      @media (max-width: 768px) {
+        .prototype-card {
+          width: 90%;
+        }
+  
+        .header .menu-icon {
+          padding: 20px;
+        }
+  
+        .header li a {
+          padding: 15px;
+          font-size: 16px;
+        }
+  
+        .prototypes {
+          padding: 40px 20px;
+        }
+  
+        .prototypes h2 {
+          font-size: 26px;
+        }
+      }
